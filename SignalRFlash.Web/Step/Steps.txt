@@ -1,0 +1,11 @@
+﻿Steps
+--------------------
+
+1. Install SignalR
+2. Map SignalR Routes
+3. Create a Hub
+4. Add "BroadcastMessage" to Hub
+   - Send incoming message to all connected clients
+5. Add SignalR to page
+6. Add SignalR Hub Proxy to page
+7. Wire up client side methods

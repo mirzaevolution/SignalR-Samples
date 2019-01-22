@@ -1,0 +1,35 @@
+﻿
+@{
+	ViewBag.Title = "Index";
+}
+<style>
+	#ChatBox {
+		padding: 10px;
+	}
+</style>
+<h2>Signal R Authentication Demo</h2>
+<br />
+<div class="row">
+	@if (User.Identity.IsAuthenticated)
+	{
+		<div class="col-md-4">
+
+			<form id="FormMessage">
+				<div class="form-group">
+					<label>Enter short message:</label>
+					<textarea id="TextMessage" class="form-control" cols="10" rows="5"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">Send</button>
+			</form>
+		</div>
+	}
+
+	<div class="col-md-6" id="ChatBox">
+
+	</div>
+</div>
+@section scripts{
+	<script src="~/Scripts/jquery.signalR-2.4.0.min.js"></script>
+	<script src="~/SignalR/Hubs"></script>
+	<script src="~/Scripts/AuthSocket/Index.js"></script>
+}

@@ -1,0 +1,134 @@
+﻿
+@{
+	ViewBag.Title = "Hub Demo";
+}
+@section scripts{
+	<script src="~/SignalR/Hubs"></script>
+	<script src="~/Scripts/Home/hubDemo.js"></script>
+}
+<style>
+	div p{
+		color:royalblue;
+	}
+</style>
+<h2>Hub Demo</h2>
+
+<br />
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Hub: MyMethod()</h3>
+			</div>
+			<div class="panel-body">
+				<button id="ButtonMyMethod" class="btn btn-primary">MyMethod()</button><br /><br />
+				<div>Response: <p id="ResponseMyMethod"></p></div>
+			</div>
+		</div>
+	</div>
+	<br />
+
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Hub: MyMethodWithParameters(string param)</h3>
+			</div>
+			<div class="panel-body">
+				<button id="ButtonMyMethodWithParameters" class="btn btn-primary">MyMethodWithParameters(..)</button><br /><br />
+				<div>Response: <p id="ResponseMyMethodWithParameters"></p></div>
+			</div>
+		</div>
+	</div>
+	<br />
+
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Hub: MyMethodParameterComplex(MyParam param)</h3>
+			</div>
+			<div class="panel-body">
+				<button id="ButtonMyMethodParameterComplex" class="btn btn-primary">MyMethodParameterComplex(..)</button><br /><br />
+				<div>Response: <p id="ResponseMyMethodParameterComplex"></p></div>
+			</div>
+		</div>
+	</div>
+	<br />
+
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Hub:  MethodParamWithReturn(string param)</h3>
+			</div>
+			<div class="panel-body">
+				<button id="ButtonMethodParamWithReturn" class="btn btn-primary">MethodParamWithReturn(..)</button><br /><br />
+				<div>Response: <p id="ResponseMethodParamWithReturn"></p></div>
+			</div>
+		</div>
+	</div>
+	<br />
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Hub: MethodParamComplexWithReturn(MyParam param)</h3>
+			</div>
+			<div class="panel-body">
+				<button id="ButtonMyMethodParamComplexWithReturn" class="btn btn-primary">MethodParamComplexWithReturn(..)</button><br /><br />
+				<div>Response: <p id="ResponseMethodParamComplexWithReturn"></p></div>
+			</div>
+		</div>
+	</div>
+	<br />
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Hub: TestException()</h3>
+			</div>
+			<div class="panel-body">
+				<button id="ButtonTestException" class="btn btn-primary">TestException()</button><br /><br />
+				<div>Response: <p id="ResponseTestException"></p></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Hub: CallMeOnly()</h3>
+			</div>
+			<div class="panel-body">
+				<p class="lead text-primary">This will notify the caller only!</p>
+				<button id="ButtonCallMeOnly" class="btn btn-primary">CallMeOnly()</button><br /><br />
+				<div>Response: <p id="ResponseCallMeOnly"></p></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Hub: CallOthers()</h3>
+			</div>
+			<div class="panel-body">
+				<p class="lead text-primary">This will notify the others only!</p>
+				<button id="ButtonCallOthers" class="btn btn-primary">CallOthers()</button><br /><br />
+				<div>Response: <p id="ResponseCallOthers"></p></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Json CallDemoHubJson()</h3>
+			</div>
+			<div class="panel-body">
+				<form id="FormJson">
+					<div class="form-group">
+						<label>Enter short message: </label>
+						<input type="text" class="form-control" id="TextMessage" name="TextMessage" required/>
+					</div>
+					<button type="submit" class="btn btn-primary">Send</button>
+				</form>
+				<br />
+				<div>Response: <p id="ResponsJsonMessage"></p></div>
+			</div>
+		</div>
+	</div>
+</div>
